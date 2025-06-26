@@ -1,0 +1,22 @@
+name: Black-format Notebooks
+
+on: [push, pull_request]
+
+jobs:
+  black-nb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install formatter
+        run: pip install black[jupyter]
+
+      - name: Format notebooks + py files
+        run: |
+          black --quiet .
