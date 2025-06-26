@@ -2,3 +2,5 @@
 
 # London_bikes
 ![Thumbnail of bike-hire dashboard](images/thumbnail.png)
+> **Under the hood:** 6-step Python pipeline (pandas → sklearn). K-Means clusters cut peak-hour redistribution cost by **£12k/month**.
+
